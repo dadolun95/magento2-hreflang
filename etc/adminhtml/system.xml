@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="dadolun" translate="label" sortOrder="10">
+            <label>Dadolun</label>
+        </tab>
+        <section id="dadolun_hreflang" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Alternate Urls Management</label>
+            <tab>dadolun</tab>
+            <resource>Dadolun_Hreflang::system_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="locale_code" translate="label comment" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scripts</label>
+                    <frontend_model>Dadolun\Hreflang\Block\Adminhtml\Form\Field\LocaleCode</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment><![CDATA[
+                        Insert singole or multiple locale code version for this scope, check documentation <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" target="_blank">here</a>.
+                    ]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

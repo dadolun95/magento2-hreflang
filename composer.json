@@ -1,0 +1,29 @@
+{
+    "name": "dadolun95/magento2-hreflang",
+    "description": "This extension adds the alternate hreflang tag for: Cms pages, products and categories.",
+    "homepage": "https://github.com/dadolun95/magento2-hreflang",
+    "type": "magento2-module",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "magento",
+        "magento2",
+        "seo",
+        "hreflang"
+    ],
+    "authors": [
+        {
+            "name": "Davide Lunardon",
+            "homepage": "https://github.com/dadolun95/magento2-hreflang"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Dadolun\\Hreflang\\": ""
+        }
+    }
+}

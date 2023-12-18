@@ -1,0 +1,10 @@
+<?php
+/** @var $hreflangManagement \Dadolun\Hreflang\ViewModel\Hreflang */
+$hreflangManagement = $block->getData("hreflang");
+$alternativeUrls = $hreflangManagement->getAlternativeUrls();
+?>
+<?php if ($alternativeUrls): ?>
+    <?php foreach ($alternativeUrls as $hrefLang => $url): ?>
+        <link rel="alternate" hreflang="<?php echo $hrefLang ?>" href="<?php echo $url ?>" />
+    <?php endforeach; ?>
+<?php endif ?>

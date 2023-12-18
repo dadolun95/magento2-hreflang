@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Dadolun\Hreflang\Model\Retriever\HreflangService">
+        <arguments>
+            <argument name="retrievers" xsi:type="array">
+                <item name="catalog_product_view" xsi:type="object">Dadolun\Hreflang\Model\Retriever\ProductHreflangRetriever</item>
+                <item name="catalog_category_view" xsi:type="object">Dadolun\Hreflang\Model\Retriever\CategoryHreflangRetriever</item>
+                <item name="cms_page_view" xsi:type="object">Dadolun\Hreflang\Model\Retriever\CmsPageHreflangRetriever</item>
+                <item name="cms_index_index" xsi:type="boolean">false</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
