@@ -6,6 +6,7 @@ This modules adds
 - cms pages
 - product pages
 - category pages
+
 aternate urls management.
 
 ## Compatibility
